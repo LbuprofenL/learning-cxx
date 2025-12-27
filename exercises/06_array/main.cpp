@@ -11,7 +11,7 @@ unsigned long long fibonacci(int i) {
             return 1;
         default:
             // TODO: 补全三目表达式缺失的部分
-            return i<=2 ? 1 : (arr[i] = fibonacci(i - 1) + fibonacci(i - 2));
+            return arr[i]!=0 ? arr[i] : (arr[i] = fibonacci(i - 1) + fibonacci(i - 2));
     }
 }
 

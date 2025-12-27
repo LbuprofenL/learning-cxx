@@ -37,8 +37,8 @@ ColorEnum convert_by_pun(Color c) {
 
     TypePun pun;
     // TODO: 补全类型双关转换
-
-    return pun.e;
+    pun.c = c;
+    return pun.e;//只能读取最后一次写入的成员
 }
 
 int main(int argc, char **argv) {
