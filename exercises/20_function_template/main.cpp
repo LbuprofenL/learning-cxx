@@ -2,9 +2,13 @@
 
 // READ: 函数模板 <https://zh.cppreference.com/w/cpp/language/function_template>
 // TODO: 将这个函数模板化
-int plus(int a, int b) {
-    return a + b;
+template<typename T> T plus(T a, T b) {
+    return (a*10 + b*10)/10;
 }
+template int plus<int>(int,int);
+template unsigned int plus<unsigned int>(unsigned int,unsigned int);
+template float plus<float>(float,float);
+template double plus<double>(double a,double b);
 
 int main(int argc, char **argv) {
     ASSERT(plus(1, 2) == 3, "Plus two int");
