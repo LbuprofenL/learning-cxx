@@ -5,7 +5,7 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) const { // 加上cv限定符const 才能访问带有const修饰的对象
+    int get(int i) const { // 加上cv限定符const 才能访问带有const修饰的对象，const修饰的是this
         return numbers[i];
     }
 };
